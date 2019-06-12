@@ -22,10 +22,6 @@ npm run build --report
 
 适用于 Vue 的 video.js 播放器组件。
 
-### 示例
-
-[demo代码示例](https://github.com/libing-cheer/video-player)
-
 ### 安装
 
 #### CDN
