@@ -1,17 +1,24 @@
 <template>
-  <div class="hello">
-    <div class="container">
-      <div class="player">
-        <video-player
-          class="video-player vjs-custom-skin"
-          ref="videoPlayer"
-          :playsinline="true"
-          :options="playerOptions"
-          @play="onPlayerPlay($event)"
-          @pause="onPlayerPause($event)"
-        >
-        </video-player>
-      </div>
+  <div class="container">
+    <div class="player">
+      <video-player
+        class="video-player vjs-custom-skin"
+        ref="videoPlayer"
+        :playsinline="true"
+        :options="playerOptions"
+        @play="onPlayerPlay($event)"
+        @pause="onPlayerPause($event)"
+        @ended="onPlayerEnded($event)"
+        @waiting="onPlayerWaiting($event)"
+        @playing="onPlayerPlaying($event)"
+        @loadeddata="onPlayerLoadeddata($event)"
+        @timeupdate="onPlayerTimeupdate($event)"
+        @canplay="onPlayerCanplay($event)"
+        @canplaythrough="onPlayerCanplaythrough($event)"
+        @statechanged="playerStateChanged($event)"
+        @ready="playerReadied"
+      >
+      </video-player>
     </div>
   </div>
 </template>
@@ -56,7 +63,22 @@ export default {
     // 播放事件
     onPlayerPlay() { },
     // 暂停事件
-    onPlayerPause() { }
+    onPlayerPause() { },
+    // 播放结束事件
+    onPlayerEnded() {},
+    onPlayerWaiting() {},
+    onPlayerPlaying() {},
+    onPlayerLoadeddata() {},
+    onPlayerTimeupdate() {},
+    onPlayerTimeupdate() {},
+    onPlayerCanplay() {},
+    onPlayerCanplaythrough() {},
+    playerStateChanged() {},
+    playerReadied(player) {
+      console.log('the player is readied', player)
+      // you can use it to do something...
+      // player.[methods]
+    }
   }
 }
 </script>
