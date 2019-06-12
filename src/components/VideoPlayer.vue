@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       playerOptions: {
-        //        playbackRates: [0.7, 1.0, 1.5, 2.0], //播放速度
+        playbackRates: [0.7, 1.0, 1.5, 2.0], //播放速度
         autoplay: false, //如果true,浏览器准备好时开始回放。
         muted: false, // 默认情况下将会消除任何音频。
         loop: false, // 导致视频一结束就重新开始。
@@ -39,12 +39,12 @@ export default {
         poster: "poster.jpg", //你的封面地址
         width: document.documentElement.clientWidth,
         notSupportedMessage: '此视频暂无法播放，请稍后再试', //允许覆盖Video.js无法播放媒体源时显示的默认信息。
-        //        controlBar: {
-        //          timeDivider: true,
-        //          durationDisplay: true,
-        //          remainingTimeDisplay: false,
-        //          fullscreenToggle: true  //全屏按钮
-        //        }
+        controlBar: {
+          timeDivider: true,
+          durationDisplay: true,
+          remainingTimeDisplay: false,
+          fullscreenToggle: true  //全屏按钮
+        }
       }
     }
   },
@@ -61,11 +61,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container {
-  background-color: #efefef;
   min-height: 100%;
 }
 .player {
-  width: 50vw;
-  height: auto;;
+  width: 75vw;
+  height: auto;
+  margin: 5vh auto;
+}
+.video-js .vjs-big-play-button{
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
 }
 </style>
+
