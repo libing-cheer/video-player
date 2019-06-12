@@ -4,6 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import 'video.js/dist/video-js.css'
+import 'vue-video-player/src/custom-theme.css'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
