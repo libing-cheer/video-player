@@ -35,6 +35,7 @@ export default {
         sources: [{
           type: "video/mp4",
           src: "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" //你的视频地址（必填）
+          // https://cdn.theguardian.tv/webM/2015/07/20/150716YesMen_synd_768k_vp8.webm
         }],
         poster: "poster.jpg", //你的封面地址
         width: document.documentElement.clientWidth,
@@ -52,7 +53,9 @@ export default {
     videoPlayer
   },
   methods: {
+    // 播放事件
     onPlayerPlay() { },
+    // 暂停事件
     onPlayerPause() { }
   }
 }
@@ -67,11 +70,6 @@ export default {
   width: 75vw;
   height: auto;
   margin: 5vh auto;
-}
-.video-js .vjs-big-play-button{
-  height: 2em;
-  width: 2em;
-  border-radius: 50%;
 }
 </style>
 
